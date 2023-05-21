@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>A passagem ta um absurdo pqp</title>
+</head>
+<body>
+    
+    Valor da passagem <input type="text" id="input_valoronibus"> <br>
+    Quantidade de viagens por mês <input type="text" id="input_qtdviagens"> <br>
+    Distancia em KM <input type="text" id="input_distancia"> <br>
+    
+
+    <button onclick="vt()">Calcular VT</button>
+
+    <div id="div_resultado"></div>
+
+
+</body>
+</html>
+
+<script>
+function vt() {
+
+    var valorpassagem = Number(input_valoronibus.value)
+    var qtdviagens = Number(input_qtdviagens.value)
+    var distancia = Number(input_distancia.value)
+    var uber = distancia * 0.75
+    var viagemuber = qtdviagens * 0.10
+    var gastouber = viagemuber * uber
+    
+    var totalviagens = qtdviagens * valorpassagem
+    var vt = totalviagens + gastouber
+
+    div_resultado.innerHTML = `Você vai gastar R${vt} por mês com transporte`
+}
+
+</script>

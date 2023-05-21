@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade do soninho zzzzz</title>
+</head>
+
+<body>
+
+    Calcular sono <input type="text" id="input_qtdhoras">
+    <button onclick="calcular_sono()">Calcular sono</button>
+
+    <div id="div_resultado"></div>
+
+
+</body>
+
+</html>
+
+<script>
+
+    function calcular_sono() {
+        var qtdhoras = Number(input_qtdhoras.value)
+        var fase1 = 0.05 * qtdhoras
+        var fase2 = 0.45 * qtdhoras
+        var fase3 = 0.30 * qtdhoras
+        var fase4 = 0.20 * qtdhoras
+
+        div_resultado.innerHTML = (`Ao dormir ${qtdhoras} horas, você dormiu:
+    ${fase1} horas na fase 1 
+    ${fase2} horas na fase 2
+    ${fase3} horas na fase 3
+    ${fase4} horas na fase REM`) 
+
+
+    }
+
+
+
+</script>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autoescola</title>
+</head>
+<body>
+    Qual seu nome? <input type="text" id="input_nome">
+    Qual sua idade? <input type="text" id="input_idade">
+    <button onclick="avaliar_aluno()">Avaliar aluno</button>
+    <div id="div_cnh"></div>
+</body>
+</html>
+<script>
+    function avaliar_aluno() {
+        var nome = input_nome.value
+        var idade = Number(input_idade.value)
+        var faltam = (idade * 100) / 18
+        
+        if (idade >= 18) {
+        div_cnh.innerHTML = (`${nome}, vamos tirar a CNH?`) 
+    }
+    else {
+        div_cnh.innerHTML = (`${nome}, você possui ${faltam.toFixed(2)}% da idade necessária para tirar a CNH, vá jogar Playstation!`)
+    }
+
+}
+
+
+</script>

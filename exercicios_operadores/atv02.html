@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resultado da eleição do amoedo</title>
+</head>
+<body>
+    
+    Quantidade de votos do candidato A <input type="text" id="input_cand_a"> <br>
+    Quantidade de votos do candidato B <input type="text" id="input_cand_b"> <br>
+    Quantidade de votos de votos em branco <input type="text" id="input_votos_branco"> <br>
+    Quantidade de votos nulos <input type="text" id="input_votos_nulos"> 
+
+    <button onclick="resultado()">Resultado da eleição</button> <br>
+
+    <div id="div_resultado"></div>
+
+
+</body>
+</html>
+
+<script>
+    function resultado() {
+        var qtdVotosA = Number(input_cand_a.value);
+        var qtdVotosB = Number(input_cand_b.value);
+        var qtdVotosBranco = Number(input_votos_branco.value);
+        var qtdVotosNulos = Number(input_votos_nulos.value);
+
+        var total = qtdVotosA + qtdVotosB + qtdVotosBranco + qtdVotosNulos;
+        var porc_votoA = qtdVotosA * 100 / total;
+        var porc_votoB = qtdVotosB * 100 / total;
+        var porc_invalidos = (qtdVotosBranco + qtdVotosNulos) * 100 / total;
+
+        div_resultado.innerHTML = 
+        `Total de votos: ${total} <br>
+        Candidato A: ${porc_votoA}% (${qtdVotosA} votos) <br>
+        Candidato B: ${porc_votoB}% (${qtdVotosB} votos) <br>
+        Inválidos: ${porc_invalidos}% (${qtdVotosBranco + qtdVotosNulos} votos)` 
+ 
+ 
+
+
+
+    }
+
+
+</script>

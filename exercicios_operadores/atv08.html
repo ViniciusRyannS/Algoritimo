@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>odeio matematica e suas circunferencias</title>
+</head>
+<body>
+    Solicite o raio de uma circunferência <input type="text" id="input_raiocirc">
+    <button onclick="calcular_area()">Calcular Área</button>
+    <div id="div_pi"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular_area() {
+    var raio = Number(input_raiocirc.value)
+    var PI = 3.14
+    var area = PI * raio ** 2 
+    
+    div_pi.innerHTML = (`A área da circunferência é ${area}`)
+    }
+
+</script>

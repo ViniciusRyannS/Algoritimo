@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade da pizza</title>
+</head>
+<body>
+
+    Preço da pizza <input type="text" id="input_preco"> <br>
+    Escolha um sabor <input type="text" id="input_sabor"> <br>
+    Quantos amigos irão comer? <input type="text" id="input_qtdamgs"> <br>
+
+    <button onclick="valorporamg()">Ver valor por amigo</button>
+
+    
+
+    <div id="div_valoramg"></div>
+    
+</body>
+</html>
+
+<script>
+    function valorporamg() {
+
+    var sabor = input_sabor.value
+    var qtdamgs = Number(input_qtdamgs.value)
+    var valorpizza = Number(input_preco.value)
+    
+
+    var valortotal = valorpizza * 0.10
+    var valorb = (valorpizza + valortotal) / qtdamgs 
+     
+
+    
+    div_valoramg.innerHTML = `Cada amigo vai colaborar com R$${valorb} para a pizza de ${sabor}.`
+
+}
+
+</script>

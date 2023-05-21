@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ooooo potencia</title>
+</head>
+<body>
+    Digite um número (base) <input type="text" id="input_vlr1">
+    Digite outro número (expoente) <input type="text" id="input_vlr2">
+    <button onclick="calcular()">Fazer Potencia</button>
+
+    <div id="div_potencia"></div>
+
+</body>
+</html>
+
+<script>
+    function calcular() {
+    var num1 = Number(input_vlr1.value)
+    var num2 = Number(input_vlr2.value)
+    var resultado = num1 ** num2
+
+    div_potencia.innerHTML = (`${num1} elevado a ${num2} dá ${resultado}`)
+    }
+
+
+</script>

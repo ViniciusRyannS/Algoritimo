@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>O Martins realmente é o pai do filho da thaina, mas vcs nao estao prontos pra essa conversa.</title>
+</head>
+<body>
+    Quantos filhos você tem? <input type="text" id="input_qtdfilhos">
+    <button onclick="situacao()">Verificar situação</button>
+
+    <div id="div_filhos"></div>
+    
+
+
+</body>
+</html>
+<script>
+    function situacao() {
+       var qtdfilhos = Number(input_qtdfilhos.value)
+       
+       
+    if (qtdfilhos == 0) {
+    div_filhos.innerHTML = ("Sem descendentes.")
+   }
+           
+    if (qtdfilhos == 1) {
+        div_filhos.innerHTML = ("Filho único")
+
+    } 
+    if (qtdfilhos >= 2) {
+        div_filhos.innerHTML = ("Crescei e multiplicai-vos!")
+
+    }
+
+
+    }
+
+</script>

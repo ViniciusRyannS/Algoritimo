@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>IMC</title>
+</head>
+<body>
+    Qual seu peso? (KG) <input type="text" id="input_peso">
+    Qual sua altura? (em centímetros) <input type="text" id="input_altura">
+
+    <button onclick ="calcularimc()">Calcula IMC</button>
+    <div id="div_imc"></div>
+
+</body>
+</html>
+
+<script>
+    function calcularimc() {
+
+    var peso = Number(input_peso.value)
+    var altura = Number(input_altura.value)
+    var alturax = altura * altura
+    var total = peso / alturax 
+    var totalformatado = total.toFixed(1)
+
+    //tofixed é utilizado para limitar os números após a virgula ex: (2) = 2 numeros depois da virgula (numeros quebrados extensos)
+
+        div_imc.innerHTML = `Seu IMC é de : ${totalformatado}`
+    }
+
+
+
+</script>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Raiz quadrada</title>
+</head>
+<body>
+    Solicite um número para ver sua raiz quadrada! <input type="text" id="input_vlr1">
+    <button onclick="raizquadrada()">Exibir sua raiz quadrada</button>
+    <div id="div_raizquadrada"></div>
+
+    Solicite um número para ver sua raiz cúbica! <input type="text" id="input_vlr2">
+    <button onclick="raizcubica()">Exibir sua raiz cubica</button>
+    <div id="div_raizcubica"></div>
+
+</body>
+</html>
+
+<script>
+    function raizquadrada() {
+        var num1 = Number(input_vlr1.value)
+        var raizqdd = Number(num1 * num1 )
+        var raizquadrada = Math.sqrt(num1)
+            
+        div_raizquadrada.innerHTML = (raizquadrada)
+    }
+
+    function raizcubica() {
+    var num2 = Number(input_vlr2.value)
+    var raizcub = Number(num2 * num2 * num2 )
+    var raizcubica = Math.cbrt(num2)
+
+
+        div_raizcubica.innerHTML = (raizcubica)
+
+    }
+
+
+</script>
+

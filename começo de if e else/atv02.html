@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade do banco</title>
+</head>
+<body>
+    <h2>Bem vindo a central do banco Xpto</h2> <br>
+    Qual é o saldo da sua conta? <input type="text" id="input_saldo"> <br>
+    Qual seu débito? <input type="text" id="input_debito"> <br>
+    <button onclick="analisar()">Analisar Conta</button>
+    <div id="div_total"></div>
+    <div style="color: red;" id="div_negativo"></div>
+    
+    
+</body>
+</html>
+<script>
+    function analisar() {
+        var saldo = Number(input_saldo.value)
+        var debito = Number(input_debito.value)
+        var desconto = saldo - debito 
+  
+        if (desconto <= 0) {
+            div_negativo.innerHTML = (`O saldo atual da sua conta corrente é ${desconto.toFixed(2)}`)
+        }
+        else {
+            div_total.innerHTML = (`O saldo atual da sua conta corrente é ${desconto.toFixed(2)}`)
+    }
+    }    
+</script>

@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Operadores: Tabuada</title>
+</head>
+
+<body>
+
+    Digite um número <input type="text" id="input_vlr1">
+    <button onclick="vlr1()">Calcular</button>
+
+    <div id="div_tabuada"></div>
+    
+    
+</body>
+
+</html>
+
+<script>
+    function vlr1() {
+        var vlr1 = input_vlr1.value
+        var resultado = Number(vlr1) * 1;
+        var resultado2 = Number(vlr1) * 2;
+        var resultado3 = Number(vlr1) * 3;
+        var resultado4 = Number(vlr1) * 4;
+        var resultado5 = Number(vlr1) * 5;
+        var resultado6 = Number(vlr1) * 6;
+        var resultado7 = Number(vlr1) * 7;
+        var resultado8 = Number(vlr1) * 8;
+        var resultado9 = Number(vlr1) * 9;
+        var resultado10 = Number(vlr1) * 10;
+
+
+        div_tabuada.innerHTML = (vlr1 + " x 1 = " + resultado + "<br>" +
+        vlr1 + " x 2 = " + resultado2 + "<br>" +
+        vlr1 + " x 3 = " + resultado3 + "<br>" +
+        vlr1 + " x 4 = " + resultado4 + "<br>" +
+        vlr1 + " x 5 = " + resultado5 + "<br>" +
+        vlr1 + " x 6 = " + resultado6 + "<br>" +
+        vlr1 + " x 7 = " + resultado7 + "<br>" +
+        vlr1 + " x 8 = " + resultado8 + "<br>" +
+        vlr1 + " x 9 = " + resultado9 + "<br>" +
+        vlr1 + " x 10 = " + resultado10 )
+
+    }
+
+
+</script>

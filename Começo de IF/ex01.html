@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>atividade das maçãs</title>
+</head>
+<body>
+    
+    <h1>atividade das maçãs</h1>
+    <input type="text" id="input_qtdmacas">
+    <button onclick="compra()">Finalizar compra</button>
+
+    
+</body>
+</html>
+
+<script>
+    function compra() {
+    var qtdmaca = Number(input_qtdmacas.value)
+    var precomaca = 0.75
+    var resultado = precomaca * qtdmaca
+
+    var promocao = (precomaca - 0.07) * qtdmaca
+    // var totaldesc = qtdmaca * desconto
+    
+    if (qtdmaca <= 9) {
+    alert(resultado)
+    }
+    if (qtdmaca >= 10) {
+    alert(promocao.toFixed(2))
+ }
+
+}
+
+</script>

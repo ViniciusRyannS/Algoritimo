@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Atividade das bebidas do martins</title>
+</head>
+<body>
+    <h1>Atividade das bebidas do martinica</h1> <br>
+    Quantas latinhas você toma por dia? <input type="text" id="input_qtdlatinhas">
+    <button onclick="latinhas()">Quantos refris?</button>
+    <div id="div_latinha"></div>
+
+</body>
+</html>
+<script>
+    function latinhas() {
+    var latdias = Number(input_qtdlatinhas.value)
+    var lataano = latdias * 365
+    
+    div_latinha.innerHTML = (`Voce toma ${lataano} latinhas por ano.`)
+    if (lataano >= 500) {
+    div_latinha.innerHTML = (`Você toma ${lataano} latinhas por ano, cuide melhor da sua saúde!`)
+    }
+
+    }
+
+</script>
