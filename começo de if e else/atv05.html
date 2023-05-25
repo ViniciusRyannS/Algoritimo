@@ -9,12 +9,23 @@
 <body>
     Qual sua frequência? <input type="text" id="input_freq">
     <button onclick="frequencia()">Analisar frequência</button>
-
+    <div id="div_freq"></div>
+    
 
 </body>
 </html>
 <script>
     function frequencia() {
-        var freq =Number(input_freq.value)
+        var freq = Number (input_freq.value)
+        
+        if(freq <= 75) {
+            div_freq.innerHTML = `<img src="./turista.jpeg">`
+        }
+        
+        else {
+            div_freq.innerHTML = `<img src="./aluno estudioso.jpg">`
+        }
     }
+
+    
 </script>
